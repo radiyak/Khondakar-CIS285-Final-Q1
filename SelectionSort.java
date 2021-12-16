@@ -6,35 +6,32 @@ public class SelectionSort {
 
         int N = arr.length;
 
-        int i, j, pos, temp;
+        int i, j, temp;
 
         for (i = 0; i < N; i++)
 
         {
 
-            pos = j;
 
-            for (j = i+1; j < N-1; j++)
+
+            for (j = i+1; j < N; j++)
 
             {
 
-                if (arr[j] < arr[pos])
+                if (arr[j] < arr[i])
 
                 {
+                	temp = arr[i];
 
-                    pos = i;
+                    arr[i] = arr[j];
+                    arr[j]= temp;
+
 
                 }
 
             }
 
-            /* Swap arr[i] and arr[pos] */
 
-            temp = arr[I];
-
-            arr[i] = arr[pos];
-
-            arr[pos]= temp;
 
         }
 
